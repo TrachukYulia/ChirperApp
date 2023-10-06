@@ -1,4 +1,4 @@
-# Twitter
+# Chirper
 A social network that is an analogue of Twitter for communication and exchange of information between users.
 
 # Functionality
