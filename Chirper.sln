@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chirper.WebUI", "Twitter.We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chirper.Core", "Chirper.Core\Chirper.Core.csproj", "{D04F7E8B-6F80-4BC3-91EC-411F179EF186}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chirper.Application", "Chirper.Application\Chirper.Application.csproj", "{6B74E886-5EBA-45E9-A98F-6D2D063F77AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chirper.Infrastructure", "Chirper.Infrastructure\Chirper.Infrastructure.csproj", "{168CCBE1-5EF8-461F-848D-6598C89F097F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{D04F7E8B-6F80-4BC3-91EC-411F179EF186}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D04F7E8B-6F80-4BC3-91EC-411F179EF186}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D04F7E8B-6F80-4BC3-91EC-411F179EF186}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B74E886-5EBA-45E9-A98F-6D2D063F77AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B74E886-5EBA-45E9-A98F-6D2D063F77AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B74E886-5EBA-45E9-A98F-6D2D063F77AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B74E886-5EBA-45E9-A98F-6D2D063F77AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{168CCBE1-5EF8-461F-848D-6598C89F097F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{168CCBE1-5EF8-461F-848D-6598C89F097F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{168CCBE1-5EF8-461F-848D-6598C89F097F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{168CCBE1-5EF8-461F-848D-6598C89F097F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
