@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chirper.WebUI", "Twitter.WebUI\Chirper.WebUI.csproj", "{952FA460-FEB9-4309-B160-E5DFB1391C90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chirper.Core", "Chirper.Core\Chirper.Core.csproj", "{D04F7E8B-6F80-4BC3-91EC-411F179EF186}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chirper.Core", "Chirper.Core\Chirper.Core.csproj", "{D04F7E8B-6F80-4BC3-91EC-411F179EF186}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chirper.Application", "Chirper.Application\Chirper.Application.csproj", "{6B74E886-5EBA-45E9-A98F-6D2D063F77AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chirper.Application", "Chirper.Application\Chirper.Application.csproj", "{6B74E886-5EBA-45E9-A98F-6D2D063F77AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chirper.Infrastructure", "Chirper.Infrastructure\Chirper.Infrastructure.csproj", "{168CCBE1-5EF8-461F-848D-6598C89F097F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chirper.Infrastructure", "Chirper.Infrastructure\Chirper.Infrastructure.csproj", "{168CCBE1-5EF8-461F-848D-6598C89F097F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chirper.WebUI", "Chirper.WebUI\Chirper.WebUI.csproj", "{26BEA23A-1A7F-459D-BBF0-D5C6C37B8E88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{952FA460-FEB9-4309-B160-E5DFB1391C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{952FA460-FEB9-4309-B160-E5DFB1391C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{952FA460-FEB9-4309-B160-E5DFB1391C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{952FA460-FEB9-4309-B160-E5DFB1391C90}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D04F7E8B-6F80-4BC3-91EC-411F179EF186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D04F7E8B-6F80-4BC3-91EC-411F179EF186}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D04F7E8B-6F80-4BC3-91EC-411F179EF186}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{168CCBE1-5EF8-461F-848D-6598C89F097F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{168CCBE1-5EF8-461F-848D-6598C89F097F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{168CCBE1-5EF8-461F-848D-6598C89F097F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26BEA23A-1A7F-459D-BBF0-D5C6C37B8E88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26BEA23A-1A7F-459D-BBF0-D5C6C37B8E88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26BEA23A-1A7F-459D-BBF0-D5C6C37B8E88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26BEA23A-1A7F-459D-BBF0-D5C6C37B8E88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

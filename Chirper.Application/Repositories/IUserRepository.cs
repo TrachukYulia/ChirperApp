@@ -1,4 +1,4 @@
-﻿using Chirper.Core.Common;
+﻿using Chirper.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace Chirper.Application.Repositories
 {
-    public interface IUnitOfWork
+    public interface IUserRepository
     {
-        IRepository<TEntity> repository<TEntity>() where TEntity : BaseEntity;
-
-        Task Save();
+        Task<User> GetByEmail(string email);
+        Task<User> GetByUsername(string username);
     }
 }
