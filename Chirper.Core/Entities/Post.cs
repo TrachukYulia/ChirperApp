@@ -13,6 +13,7 @@ namespace Chirper.Core.Entities
         public string? Text { get; set; }
         public int Likes { get; set; }
         public DateTime TimeCreated { get; set; } = DateTime.UtcNow;
+        public int UserId { get; set; }
         public ICollection<Comment>? Comments { get; set; }
         public User? User { get; set; }
     }
