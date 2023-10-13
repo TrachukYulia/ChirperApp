@@ -1,5 +1,5 @@
 ﻿using Chirper.Core.Common;
-using Chirper.Infrastructure.Context;
+using Chirper.Infrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,36 +12,36 @@ namespace Chirper.Infrastructure.Repositories
 {
     public class BaseRepository<T> : IRepository<T> where T : BaseEntity
     {
-        private readonly DataContext _dataContext;
+        internal readonly ChirperContext dataContext;
 
-        public BaseRepository(DataContext context)
+        public BaseRepository(ChirperContext context)
         {
-            _dataContext = context;
+            dataContext = context;
         }
 
         public void Create(T entity)
         {
-            _dataContext.Add(entity);
+            dataContext.Add(entity);
         }
 
         public void Update(T entity)
         {
-            _dataContext.Update(entity);
+            dataContext.Update(entity);
         }
 
         public void Delete(T entity)
         {
-            _dataContext.Update(entity);
+            dataContext.Update(entity);
         }
 
         public Task<T> Get(int id)
         {
-            return _dataContext.Set<T>().FirstOrDefaultAsync(x => x.Id == id);
+            return dataContext.Set<T>().FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public Task<List<T>> GetAll()
         {
-            return _dataContext.Set<T>().ToListAsync();
+            return dataContext.Set<T>().ToListAsync();
         }
     }
 }
