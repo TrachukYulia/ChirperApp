@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Chirper.Application.Repositories;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Principal;
 
 namespace Chirper.Infrastructure.Repositories
 {
@@ -28,10 +29,9 @@ namespace Chirper.Infrastructure.Repositories
         {
             dataContext.Update(entity);
         }
-
         public void Delete(T entity)
         {
-            dataContext.Update(entity);
+            dataContext.Set<T>().Remove(entity);
         }
 
         public Task<T> Get(int id)
