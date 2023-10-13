@@ -11,6 +11,6 @@ namespace Chirper.Application.Repositories
     {
         IRepository<TEntity> repository<TEntity>() where TEntity : BaseEntity;
 
-        Task Save();
+        Task Save(CancellationToken cancellationToken);
     }
 }

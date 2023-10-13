@@ -31,9 +31,9 @@ namespace Chirper.Infrastructure.Repositories
             }
             return (IRepository<TEntity>)_repositories[Type];
         }
-        public Task Save()
+        public Task Save(CancellationToken cancellationToken)
         {
-            return _context.SaveChangesAsync();
+            return _context.SaveChangesAsync(cancellationToken);
         }
         public void Dispose()
         {
