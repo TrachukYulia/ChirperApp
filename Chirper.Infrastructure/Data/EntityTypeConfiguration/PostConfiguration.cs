@@ -18,6 +18,7 @@ namespace Chirper.Infrastructure.Data.EntityTypeConfiguration
              .HasForeignKey(x => x.UserId)
              .OnDelete(DeleteBehavior.Cascade);
             builder.Property(o => o.Text).HasMaxLength(1000).IsRequired();
+            builder.Property(o => o.TimeCreated).HasDefaultValue(DateTime.UtcNow).IsRequired();
             builder.Property(o => o.Title).HasMaxLength(30).IsRequired();
         }
     }
