@@ -17,10 +17,12 @@ namespace Chirper.Infrastructure.Repositories
         public UnitOfWork(ChirperContext context)
         {
             _context = context;
+            if (_repositories == null) 
+                _repositories = new Hashtable();
+
         }
         public IRepository<TEntity> GetRepository<TEntity>() where TEntity : BaseEntity
         {
-            if (_repositories == null) _repositories = new Hashtable();
             var Type = typeof(TEntity).Name;
             if (!_repositories.ContainsKey(Type))
             {
