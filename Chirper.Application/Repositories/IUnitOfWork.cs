@@ -9,7 +9,7 @@ namespace Chirper.Application.Repositories
 {
     public interface IUnitOfWork
     {
-        IRepository<TEntity> repository<TEntity>() where TEntity : BaseEntity;
+        IRepository<TEntity> GetRepository<TEntity>() where TEntity : BaseEntity;
 
         Task Save(CancellationToken cancellationToken);
     }

@@ -18,7 +18,7 @@ namespace Chirper.Infrastructure.Repositories
         {
             _context = context;
         }
-        public IRepository<TEntity> repository<TEntity>() where TEntity : BaseEntity
+        public IRepository<TEntity> GetRepository<TEntity>() where TEntity : BaseEntity
         {
             if (_repositories == null) _repositories = new Hashtable();
             var Type = typeof(TEntity).Name;
