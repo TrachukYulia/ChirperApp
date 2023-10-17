@@ -15,7 +15,6 @@ namespace Chirper.Application.Validator
             RuleFor(x => x.Username).NotEmpty().MinimumLength(3).MaximumLength(50);
             RuleFor(x => x.Email).EmailAddress();
             RuleFor(x => x.Password).NotEmpty().MinimumLength(3).MaximumLength(50);
-
         }
     }
 }

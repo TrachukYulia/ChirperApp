@@ -34,14 +34,14 @@ namespace Chirper.Infrastructure.Repositories
             dataContext.Set<T>().Remove(entity);
         }
 
-        public Task<T> Get(int id)
+        public Task<T> Get(int id, CancellationToken cancellationToken)
         {
-            return dataContext.Set<T>().FirstOrDefaultAsync(x => x.Id == id);
+            return dataContext.Set<T>().FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
         }
 
-        public Task<List<T>> GetAll()
+        public Task<List<T>> GetAll(CancellationToken cancellationToken)
         {
-            return dataContext.Set<T>().ToListAsync();
+            return dataContext.Set<T>().ToListAsync(cancellationToken);
         }
     }
 }
