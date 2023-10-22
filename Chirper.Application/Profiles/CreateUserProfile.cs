@@ -12,7 +12,9 @@ namespace Chirper.Application.Profiles
     {
         public CreateUserMapper()
         {
-            CreateMap<UserCreateRequest, User>().ReverseMap();
+            //  CreateMap<CreateUserRequest, User>().ReverseMap();
+            CreateMap<CreateUserRequest, User>();
+            CreateMap<User, CreateUserResponse>();
         }
     }
 }

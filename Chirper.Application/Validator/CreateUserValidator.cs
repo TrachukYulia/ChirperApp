@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Chirper.Application.Validator
 {
-    public sealed class UserCreateValidator : AbstractValidator<UserCreateRequest>
+    public sealed class CreateUserValidator : AbstractValidator<CreateUserRequest>
     {
-        public UserCreateValidator()
+        public CreateUserValidator()
         {
             RuleFor(x => x.Username).NotEmpty().MinimumLength(3).MaximumLength(50);
             RuleFor(x => x.Email).EmailAddress();

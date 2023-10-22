@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chirper.Application.DTO
 {
-    public record UserCreateResponse
+    public record CreateUserResponse
     {
         public int Id { get; set; }
         public string? Username { get; set; }

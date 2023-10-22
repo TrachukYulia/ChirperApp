@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 
 namespace Chirper.Application.DTO
 {
-    public record UserCreateRequest(string Username, string Password, string Email): IRequest<UserCreateResponse>;
+    public record CreateUserRequest(string Username, string Password, string Email): IRequest<CreateUserResponse>;
 
 }

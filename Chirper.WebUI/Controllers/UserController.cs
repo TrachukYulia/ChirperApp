@@ -1,11 +1,12 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Chirper.Application.DTO;
+using System.Diagnostics;
+using Chirper.WebUI.Models;
+
 namespace Chirper.WebUI.Controllers
 {
-    [ApiController]
-    [Route("user")]
-    public class UserController : ControllerBase
+    public class UserController : Controller
     {
         private readonly IMediator _mediator;
 
@@ -13,20 +14,34 @@ namespace Chirper.WebUI.Controllers
         {
             _mediator = mediator;
         }
+        public IActionResult Index()
+        {
+            return View();
+        }
 
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
         [HttpGet]
         public async Task<ActionResult<List<GetAllUserResponse>>> GetAll(CancellationToken cancellationToken)
         {
             var response = await _mediator.Send(new GetAllUserRequest(), cancellationToken);
-            return Ok(response);
+            return View(response);
         }
 
         [HttpPost]
-        public async Task<ActionResult<UserCreateResponse>> Create(UserCreateRequest request,
+        public async Task<ActionResult<CreateUserResponse>> Create(CreateUserRequest request,
             CancellationToken cancellationToken)
         {
             var response = await _mediator.Send(request, cancellationToken);
-            return Ok(response);
+            return RedirectToAction("Index");
         }
+
     }
 }
